@@ -12,8 +12,7 @@ This project is a **Full Stack Employee Management Application** built with **Re
 2. [Setup Instructions](#setup-instructions)
 3. [Running the Application](#running-the-application)
 4. [Folder Structure](#folder-structure)
-5. [API Endpoints](#api-endpoints)
-6. [Screenshots](#screenshots)
+5. [Screenshots](#screenshots)
 
 ---
 
@@ -51,7 +50,7 @@ This project is a **Full Stack Employee Management Application** built with **Re
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/<your-username>/101396295_comp3123_assignment.git
+   git clone https://github.com/Shaheerios/101396295_comp3123_assignment.git
    cd 101396295_comp3123_assignment
    ```
 
@@ -60,7 +59,7 @@ This project is a **Full Stack Employee Management Application** built with **Re
    Navigate to the `backend` folder and add the following to the `.env` file:
 
    ```env
-   MONGO_URI=<your-mongodb-connection-string>
+   MONGO_URI=mongodb://mongo:27017/employee_management
    JWT_SECRET=<your-jwt-secret>
    ```
 
@@ -101,83 +100,6 @@ This project is a **Full Stack Employee Management Application** built with **Re
 
 ---
 
-## 5. API Endpoints
-
-### User Endpoints
-
-1. **POST** `/api/v1/user/signup`:
-
-   - **Description**: Register a new user.
-   - **Request Body**:
-     ```json
-     {
-       "username": "john_doe",
-       "email": "john.doe@example.com",
-       "password": "securepassword123"
-     }
-     ```
-
-2. **POST** `/api/v1/user/login`:
-   - **Description**: Login to obtain a JWT token.
-   - **Request Body**:
-     ```json
-     {
-       "email": "john.doe@example.com",
-       "password": "securepassword123"
-     }
-     ```
-
----
-
-### Employee Endpoints
-
-1. **GET** `/api/v1/emp/employees`:
-
-   - **Description**: Retrieve all employees.
-
-2. **POST** `/api/v1/emp/employees`:
-
-   - **Description**: Add a new employee.
-   - **Request Body**:
-     ```json
-     {
-       "first_name": "John",
-       "last_name": "Doe",
-       "email": "john.doe@example.com",
-       "position": "Manager",
-       "salary": 80000,
-       "date_of_joining": "2024-01-01",
-       "department": "IT"
-     }
-     ```
-
-3. **GET** `/api/v1/emp/employees/:id`:
-
-   - **Description**: Retrieve employee details by ID.
-
-4. **PUT** `/api/v1/emp/employees/:id`:
-
-   - **Description**: Update an employee's details.
-   - **Request Body**:
-     ```json
-     {
-       "position": "Senior Manager",
-       "salary": 90000
-     }
-     ```
-
-5. **DELETE** `/api/v1/emp/employees/:id`:
-
-   - **Description**: Delete an employee by ID.
-
-6. **GET** `/api/v1/emp/employees/search`:
-   - **Description**: Search employees by department or position.
-   - **Query Parameters**:
-     - `department` (optional)
-     - `position` (optional)
-
----
-
-## 6. Screenshots
+## 5. Screenshots
 
 Screenshots can be found in the provided 101396295_comp3123_assignment Screenshots.docx
